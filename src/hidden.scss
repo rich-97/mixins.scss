@@ -1,0 +1,8 @@
+@mixin hidden($what: '') {
+  @if $what == 'invisible' {
+    visibility: hidden;
+  } @elseif $what == '' {
+    display: none;
+    visibility: hidden;
+  }
+}

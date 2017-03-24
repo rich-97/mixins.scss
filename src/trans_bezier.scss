@@ -1,0 +1,5 @@
+@mixin trans-bezier($n, $m, $l, $p) {
+  // NOTE: $n, $m, $l, $p betwen 0 and 1.
+  $cubic: all .5s cubic-bezier($n, $m, $l, $p);
+  transition: $cubic;
+}

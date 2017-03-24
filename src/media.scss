@@ -1,0 +1,23 @@
+@mixin media($media) {
+  // unity
+  $u: 1px;
+  // breakpoint
+  $bp: (
+    xs: 360 * $u,
+    sm: 767 * $u,
+    md: 1023 * $u,
+    lg: 1360 * $u
+  );
+  @if $media == xs {
+    @media screen and (max-width: map-get($bp, sm)) { @content; }
+  }
+  @elseif $media == sm {
+    @media screen and (min-width: map-get($bp, sm)) and (max-width: map-get($bp, md)) { @content; }
+  }
+  @elseif $media == md {
+    @media screen and (min-width: map-get($bp, md)) and (max-width: map-get($bp, lg)) { @content; }
+  }
+  @elseif $media == lg {
+    @media screen and (min-width: map-get($bp, lg)) { @content; }
+  }
+}

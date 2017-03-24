@@ -1,0 +1,21 @@
+@mixin border($width, $color: '', $style: '') {
+  $width: $width * 1px;
+  $default: (
+    #0b0b0b
+    solid
+  );
+  @if $style == '' and $color == '' {
+    border: {
+      color: nth($default, 1);
+      style: nth($default, 2);
+      width: $width;
+    }
+  }
+  @elseif $style == '' {
+    border: {
+      color: $color;
+      style: nth($default, 2);
+      width: $width;
+    }
+  }
+}

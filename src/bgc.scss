@@ -1,0 +1,14 @@
+@mixin bgc($color) {
+  $length: length($color);
+  @if $length == 1 {
+    background-color: $color;
+  }
+  @elseif $length == 3 {
+    $bg: rgb(nth($color, 1), nth($color, 2), nth($color, 3));
+    background-color: $bg;
+  }
+  @elseif $length == 4 {
+    $bga: rgba(nth($color, 1), nth($color, 2), nth($color, 3), nth($color, 4));
+    background-color: $bga;
+  }
+}

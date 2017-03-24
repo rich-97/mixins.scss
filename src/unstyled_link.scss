@@ -1,0 +1,15 @@
+@mixin unstyled-link($color: '') {
+  @if $color == '' {
+    $color: #000;
+  }
+  color: $color;
+  text-decoration: none;
+
+  &:visited {
+    color: darken($color, 20);
+  }
+
+  &:hover {
+    color: ligthen($color, 20);
+  }
+}

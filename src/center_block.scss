@@ -1,0 +1,8 @@
+@mixin center-block($width, $margin: '') {
+  @if $margin == '' {
+    margin: 0 auto;
+  } @else {
+    margin: $margin * 1px auto;
+  }
+  width: $width * 1%;
+}

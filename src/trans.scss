@@ -1,0 +1,27 @@
+@mixin trans($args: '') {
+  $all: all .5s;
+  $list: (
+    ease
+    linear
+    ease-in
+    ease-out
+    ease-in-out
+  );
+  @if $args == '' {
+    transition: $all nth($list, 1);
+  }
+  @elseif $args == nth($list, 2) {
+    transition: $all nth($list, 2);
+  }
+  @elseif $args == nth($list, 3) {
+    transition: $all nth($list, 3);
+  }
+  @elseif $args == nth($list, 4) {
+    transition: $all nth($list, 4);
+  }
+  @elseif $args == nth($list, 5) {
+    transition: $all nth($list, 5);
+  } @else {
+    transition: $args;
+  }
+}

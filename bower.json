@@ -1,0 +1,15 @@
+{
+  "name": "mixins.scss",
+  "authors": [
+    "rich <morenoricardo237@outlook.es>"
+  ],
+  "description": "Mixins for sass",
+  "main": "mixins.scss",
+  "keywords": [
+    "sass",
+    "scss",
+    "css"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/rich-97/mixins.scss"
+}

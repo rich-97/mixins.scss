@@ -1,0 +1,11 @@
+@mixin font-face($fontname, $path, $weight: '') {
+  @font-face {
+    font-family: $fontname;
+    src: $path;
+    @if $weight == '' {
+      font-weight: normal;
+    } @else {
+      font-weight: $weight;
+    }
+  }
+}
