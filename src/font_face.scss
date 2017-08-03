@@ -1,7 +1,7 @@
 @mixin font-face($fontname, $path, $weight: '') {
   @font-face {
     font-family: $fontname;
-    src: $path;
+    src: url($path);
     @if $weight == '' {
       font-weight: normal;
     } @else {
