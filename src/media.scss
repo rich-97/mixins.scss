@@ -9,7 +9,7 @@
     lg: 1360 * $u
   );
   @if $media == xs {
-    @media screen and (max-width: map-get($bp, sm)) { @content; }
+    @media screen and (max-width: map-get($bp, xs)) { @content; }
   }
   @elseif $media == sm {
     @media screen and (min-width: map-get($bp, sm)) and (max-width: map-get($bp, md)) { @content; }
